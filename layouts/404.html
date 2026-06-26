@@ -1,7 +1,12 @@
 {{- define "main" -}}
-<h1
-  class="absolute inset-x-8 top-0 bottom-20 flex items-center justify-center text-9xl"
->
-  404
-</h1>
+<section class="flex items-center justify-center w-full h-full -translate-y-24">
+  <article class="prose dark:prose-invert px-8 text-center">
+    <header>
+      <h1 class="text-8xl m-0!">404</h1>
+      <h3>Page Not Found</h3>
+    </header>
+    <footer>
+      <a href="/">Go back to Home</a>
+    </footer>
+</section>
 {{- end -}}
