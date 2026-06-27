@@ -2,7 +2,7 @@
   {{- $url := .RelPermalink -}}<!---->
   {{- with site.Menus.main -}}
   <nav class="flex items-center gap-8 w-full">
-    <a class="hover:underline grow-2 text-xl py-2" href="/">panc</a>
+    <a class="hover:underline grow-2 text-xl py-2" href="/">{{ site.Title }}</a>
     {{- range . -}}
     {{ if $.IsMenuCurrent .Menu . }}
     <a class="hover:underline active block text-center text-xl py-2" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
