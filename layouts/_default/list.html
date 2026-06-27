@@ -47,9 +47,15 @@ $paginator.Pages -}}<!---->
   {{- end -}}
   <article class="prose dark:prose-invert px-8">
     <header>
-      <time class="text-xs antialiased opacity-60">{{- .Date | time.Format ":date_medium" -}}</time>
-      <h3 class="m-0!">{{- .Title -}}</h3>
-      <a class="absolute inset-0 text-[0px]" href="{{- .Permalink -}}">{{- .Title -}}</a>
+      <time class="text-xs antialiased opacity-60">
+        {{- .Date | time.Format ":date_medium" -}}
+      </time>
+      <h3 class="m-0! min-w-0 truncate">
+        {{- .Title -}}
+      </h3>
+      <a class="absolute inset-0 text-[0px]" href="{{- .Permalink -}}" title="{{ .Title }}" aria-label="{{ .Title }}">
+        {{- .Title -}}
+      </a>
     </header>
   </article>
 </section>

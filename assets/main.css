@@ -764,6 +764,9 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
 .max-w-\(--w\):not(#\#):not(#\#):not(#\#):not(#\#) {
   max-width: var(--w);
 }
+.min-w-0:not(#\#):not(#\#):not(#\#):not(#\#) {
+  min-width: 0;
+}
 .flex-1:not(#\#):not(#\#):not(#\#):not(#\#) {
   flex: 1;
 }
