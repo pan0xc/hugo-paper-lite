@@ -16,14 +16,14 @@
 $paginator.Pages -}}<!---->
 
 <!-- avatar -->
-{{- if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) -}}
+{{- if and $.IsHome (eq $index 0) -}}
 {{- $avatar := $.Scratch.Get "avatar" -}}
 {{- if or $avatar site.Params.author.name -}}
 <section class="mt-6 mb-12 flex flex-col items-center">
   {{- if $avatar -}}
   <div class="size-24 shrink-0 rounded-full p-2">
     <img
-      class="h-full w-full rounded-full bg-black/5! dark:bg-black/80! transition-transform duration-200 ease-out hover:scale-160 hover:border hover:border-gray-200"
+      class="h-full w-full rounded-full transition-transform duration-200 ease-out hover:scale-160 hover:border hover:border-gray-200"
       src="{{ $avatar }}" alt="{{ site.Params.author.name | default site.Title }}" />
   </div>
   {{- end -}}

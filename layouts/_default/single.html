@@ -1,6 +1,13 @@
 {{- define "main" -}}
 
-<article class="prose dark:prose-invert">
+<article class="prose
+  prose-code:before:content-none
+  prose-code:after:content-none
+  dark:prose-invert
+  mx-auto
+  max-w-2xl
+  text-justify
+">
   <header>
     <h1>{{ .Title }}</h1>
     {{- if ne .Type "page" }}
@@ -19,37 +26,61 @@
 
   <section>{{- .Content -}}</section>
 
-  <!-- Post Tags -->
-  {{- if .Params.tags -}}
-  <footer class="mt-12 flex flex-wrap">
-    {{- range .Params.tags -}} {{- $href := print (absURL "tags/") (urlize .)
-    -}}
-    <a class="mb-1.5 rounded-lg bg-black/3 px-5 py-1 no-underline hover:bg-black/6 ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/8 dark:hover:bg-white/12"
-      href="{{- $href -}}">{{- . -}}</a>
-    {{- end -}}
+  <footer>
+    <nav class="flex flex-wrap justify-center gap-x-8">
+      {{ if site.Params.article.showEditLink | default true }}
+      {{ with site.Params.repo }}
+      {{ $repo := . }}
+      {{ with $.File }}
+      <a class="flex items-center gap-2" href="{{ urls.JoinPath $repo.url $repo.editPath $repo.branch "content"
+        .Path}}" target="_blank" rel="noopener noreferrer">
+        <svg class="size-4">
+          <use href="/icons.svg#edit"></use>
+        </svg>
+        Fix typo
+      </a>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+      {{ if site.Params.article.showAuthorLinks | default true }}
+      {{ with site.Params.author.email }}
+      <a class="flex items-center gap-2" href="mailto:{{ . }}">
+        <svg class="size-4">
+          <use href="/icons.svg#email"></use>
+        </svg>
+        Get in touch
+      </a>
+      {{ end }}
+      {{ with site.Params.author.codeberg }}
+      <a class="flex items-center gap-2" href="https://codeberg.org/{{ . }}" target="_blank" rel="noopener noreferrer">
+        <svg class="size-4">
+          <use href="/icons.svg#codeberg"></use>
+        </svg>
+        {{ . }}
+      </a>
+      {{ end }}
+      {{ with site.Params.author.github }}
+      <a class="flex items-center gap-2" href="https://github.com/{{ . }}" target="_blank" rel="noopener noreferrer">
+        <svg class="size-4">
+          <use href="/icons.svg#github"></use>
+        </svg>
+        {{ . }}
+      </a>
+      {{ end }}
+      {{ end }}
+    </nav>
+
+    {{- with .Params.tags }}
+    <nav class="mt-8 flex flex-wrap justify-center">
+      {{- range . }}
+      {{- $href := print (absURL "tags/") (urlize .) }}
+      <a class="mb-1.5 rounded-lg bg-black/3 px-5 py-1 no-underline hover:bg-black/6 ltr:mr-1.5 rtl:ml-1.5 dark:bg-white/8 dark:hover:bg-white/12"
+        href="{{ $href }}">
+        {{ . }}
+      </a>
+      {{- end }}
+    </nav>
+    {{- end }}
   </footer>
-  {{- end -}}
 
-  <!-- Post Nav -->
-  {{- if not site.Params.disablePostNavigation -}}<!---->
-  {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}<!---->
-  {{- if and (gt (len $pages) 1) (in $pages . ) -}}
-  <nav
-    class="mt-24 flex rounded-xl bg-black/3 text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/8 [&>*:hover]:bg-black/2 dark:[&>*:hover]:bg-white/3">
-    {{- with $pages.Next . -}}
-    <a class="min-w-0 ltr:pr-3 rtl:pl-3" title="{{ .Name }}" href="{{- .Permalink -}}">
-      <span class="shrink-0 ltr:mr-1.5 rtl:ml-1.5">←</span>
-      <span class="truncate">{{- .Name -}}</span>
-    </a>
-    {{- end -}}
-
-    {{- with $pages.Prev . -}}
-    <a class="min-w-0 justify-end pl-3 ltr:ml-auto rtl:mr-auto" title="{{ .Name }}" aria-label="{{ .Name }}" href="{{- .Permalink -}}">
-      <span class="truncate">{{- .Name -}}</span>
-      <span class="shrink-0 ltr:ml-1.5 rtl:mr-1.5">→</span>
-    </a>
-    {{- end -}}
-  </nav>
-  {{- end -}}<!---->
-  {{- end -}}
   {{- end -}}

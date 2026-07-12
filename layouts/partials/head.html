@@ -5,7 +5,10 @@
 
   <!-- title -->
   <title>
-    {{- if not .IsHome -}}{{- .Title }} - {{ end -}}{{- site.Title -}}
+    {{- with .Title -}}
+      {{- if not $.IsHome }}{{ . }} - {{ end -}}
+    {{- end -}}
+    {{- site.Title -}}
   </title>
 
   <!-- author -->

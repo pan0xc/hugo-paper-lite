@@ -2,7 +2,7 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --w: calc(680px + 32px * 2);
+  --w: calc(768px);
 }
 
 :root {
