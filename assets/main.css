@@ -8,6 +8,9 @@
   --color-slate-200: rgb(226, 232, 240);
   --color-slate-800: rgb(29, 41, 61);
   --color-gray-200: rgb(229, 231, 235);
+  --color-gray-400: rgb(153, 161, 175);
+  --color-gray-500: rgb(106, 114, 130);
+  --color-gray-600: rgb(74, 85, 101);
   --color-neutral-500: rgb(115, 115, 115);
   --color-black: #000;
   --color-white: #fff;
@@ -214,9 +217,6 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
 }
 .relative:not(#\#):not(#\#):not(#\#):not(#\#) {
   position: relative;
-}
-.static:not(#\#):not(#\#):not(#\#):not(#\#) {
-  position: static;
 }
 .inset-0:not(#\#):not(#\#):not(#\#):not(#\#) {
   top: 0;
@@ -703,9 +703,6 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
 .mr-4\!:not(#\#) {
   margin-right: calc(var(--spacing) * 4) !important;
 }
-.mr-8\!:not(#\#) {
-  margin-right: calc(var(--spacing) * 8) !important;
-}
 .mb-1:not(#\#):not(#\#):not(#\#):not(#\#) {
   margin-bottom: var(--spacing);
 }
@@ -796,9 +793,6 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
 .-translate-y-24:not(#\#):not(#\#):not(#\#):not(#\#) {
   --tw-translate-y: calc(var(--spacing) * -24);
   translate: var(--tw-translate-x) var(--tw-translate-y);
-}
-.transform:not(#\#):not(#\#):not(#\#):not(#\#) {
-  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
 }
 .resize:not(#\#):not(#\#):not(#\#):not(#\#) {
   resize: both;
@@ -948,6 +942,20 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
 .wrap-break-word:not(#\#):not(#\#):not(#\#):not(#\#) {
   word-wrap: break-word;
 }
+.text-black\/30:not(#\#):not(#\#):not(#\#):not(#\#) {
+  color: rgba(0, 0, 0, 0.3);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .text-black\/30:not(#\#):not(#\#):not(#\#):not(#\#) {
+    color: color-mix(in oklab, var(--color-black) 30%, transparent);
+  }
+}
+.text-gray-500:not(#\#):not(#\#):not(#\#):not(#\#) {
+  color: var(--color-gray-500);
+}
+.text-gray-600:not(#\#):not(#\#):not(#\#):not(#\#) {
+  color: var(--color-gray-600);
+}
 .text-neutral-500:not(#\#):not(#\#):not(#\#):not(#\#) {
   color: var(--color-neutral-500);
 }
@@ -1086,6 +1094,11 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
   }
 }
 @media (prefers-color-scheme: dark) {
+  .dark\:text-gray-400:not(#\#):not(#\#):not(#\#):not(#\#) {
+    color: var(--color-gray-400);
+  }
+}
+@media (prefers-color-scheme: dark) {
   .dark\:prose-invert:not(#\#):not(#\#):not(#\#):not(#\#) {
     --tw-prose-body: var(--tw-prose-invert-body);
     --tw-prose-headings: var(--tw-prose-invert-headings);
@@ -1183,26 +1196,6 @@ header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) nav a.active {
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -1308,11 +1301,6 @@ header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) nav a.active {
     --tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-translate-z: 0;
-    --tw-rotate-x: initial;
-    --tw-rotate-y: initial;
-    --tw-rotate-z: initial;
-    --tw-skew-x: initial;
-    --tw-skew-y: initial;
     --tw-border-style: solid;
     --tw-font-weight: initial;
     --tw-tracking: initial;
