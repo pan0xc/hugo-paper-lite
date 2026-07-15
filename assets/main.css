@@ -10,7 +10,6 @@
   --color-gray-200: rgb(229, 231, 235);
   --color-gray-400: rgb(153, 161, 175);
   --color-gray-500: rgb(106, 114, 130);
-  --color-gray-600: rgb(74, 85, 101);
   --color-neutral-500: rgb(115, 115, 115);
   --color-black: #000;
   --color-white: #fff;
@@ -942,19 +941,8 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
 .wrap-break-word:not(#\#):not(#\#):not(#\#):not(#\#) {
   word-wrap: break-word;
 }
-.text-black\/30:not(#\#):not(#\#):not(#\#):not(#\#) {
-  color: rgba(0, 0, 0, 0.3);
-}
-@supports (color: color-mix(in lab, red, red)) {
-  .text-black\/30:not(#\#):not(#\#):not(#\#):not(#\#) {
-    color: color-mix(in oklab, var(--color-black) 30%, transparent);
-  }
-}
 .text-gray-500:not(#\#):not(#\#):not(#\#):not(#\#) {
   color: var(--color-gray-500);
-}
-.text-gray-600:not(#\#):not(#\#):not(#\#):not(#\#) {
-  color: var(--color-gray-600);
 }
 .text-neutral-500:not(#\#):not(#\#):not(#\#):not(#\#) {
   color: var(--color-neutral-500);
@@ -968,15 +956,8 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
 .no-underline:not(#\#):not(#\#):not(#\#):not(#\#) {
   text-decoration-line: none;
 }
-.antialiased:not(#\#):not(#\#):not(#\#):not(#\#) {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 .opacity-60:not(#\#):not(#\#):not(#\#):not(#\#) {
   opacity: 0.6;
-}
-.opacity-70:not(#\#):not(#\#):not(#\#):not(#\#) {
-  opacity: 0.7;
 }
 .outline:not(#\#):not(#\#):not(#\#):not(#\#) {
   outline-style: var(--tw-outline-style);
