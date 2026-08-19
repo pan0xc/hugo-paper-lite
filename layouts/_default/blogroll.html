@@ -1,0 +1,25 @@
+{{- define "main" -}}
+
+<section class="mx-6">
+<ul class="list-none pl-0">
+{{ range .Site.Data.blogroll }}
+    <li class="relative my-4 pl-0 first-of-type:mt-0 last-of-type:mb-0">
+      <span class="text-gray-500 dark:text-gray-400">
+        <time>
+          {{ time.Format ":date_medium" .date }}
+        </time>
+        {{ (urls.Parse .url).Host }}
+      </span>
+
+      <h2 class="text-2xl min-w-0 truncate">
+          {{ .title }}
+      </h2>
+      <a class="absolute inset-0 text-[0px]" href="{{- .url -}}">
+        {{- .title -}}
+      </a>
+    </li>
+{{ end }}
+</ul>
+</section>
+
+{{- end }}
