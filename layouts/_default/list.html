@@ -19,7 +19,7 @@
   {{- $avatar := $.Scratch.Get "avatar" }}
 
   {{- if or $avatar site.Params.author.name }}
-    <section class="mt-6 mb-12 flex flex-col items-center">
+    <section class="mt-6 mx-auto max-w-2xl mb-12 flex flex-col items-center">
       {{- with $avatar }}
         <div class="size-24 shrink-0 rounded-full p-2">
           <img
@@ -44,7 +44,7 @@
 {{- end }}
 
 {{/* Articles */}}
-<section class="mx-6">
+<section class="mx-auto max-w-2xl">
   <ul>
     {{- range $paginator.Pages }}
       <li class="relative my-4 first-of-type:mt-0 last-of-type:mb-0">

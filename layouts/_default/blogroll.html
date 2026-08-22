@@ -1,6 +1,6 @@
 {{- define "main" -}}
 
-<section class="mx-6">
+<section class="mx-auto max-w-2xl">
 <ul class="list-none pl-0">
 {{ range .Site.Data.blogroll }}
     <li class="relative my-4 pl-0 first-of-type:mt-0 last-of-type:mb-0">
@@ -10,7 +10,6 @@
         </time>
         {{ (urls.Parse .url).Host }}
       </span>
-
       <h2 class="text-2xl min-w-0 truncate">
           {{ .title }}
       </h2>
