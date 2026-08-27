@@ -8,17 +8,16 @@
   max-w-2xl
 ">
   <header>
-    <h1>{{ .Title }}</h1>
+    <h1 class="mb-0 text-3xl">{{ .Title }}</h1>
     {{- if ne .Type "page" }}
     <div class="text-gray-500 dark:text-gray-400">
-      {{- if .Date }}
-      <time>{{ .Date | time.Format ":date_medium" }}</time>
-      {{- end }}
-
-      {{- with .Params.authors }}
-      <span class="mx-1">&middot;</span>
-      <span>{{ delimit . ", " }}</span>
-      {{- end }}
+    {{- if .Date }}
+    <time>{{ .Date | time.Format ":date_medium" }}</time>
+    {{- end }}
+    {{- with .Params.authors }}
+    <span class="mx-1">&middot;</span>
+    <span>{{ delimit . ", " }}</span>
+    {{- end }}
     </div>
     {{- end }}
   </header>

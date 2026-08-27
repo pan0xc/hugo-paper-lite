@@ -32,3 +32,21 @@ header nav a.active {
   opacity: 1;
   font-weight: 600;
 }
+
+.prose hr {
+  border: 0;
+  height: var(--text-xl--line-height);
+  margin-block: 1.25em;
+}
+
+.prose hr::before {
+  content: "❧";
+  display: block;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-medium;
+}
