@@ -1,8 +1,7 @@
 {{- define "main" -}}
 
-<article class="prose
-  prose-code:before:content-none
-  prose-code:after:content-none
+<article class="
+  prose
   dark:prose-invert
   mx-auto
   max-w-2xl
@@ -22,7 +21,7 @@
     {{- end }}
   </header>
 
-  <section class="text-justify [text-justify:inter-ideograph] [&_img]:mx-auto">{{- .Content -}}</section>
+  <main>{{- .Content -}}</main>
 
   <footer>
     <nav class="flex flex-wrap justify-center gap-x-8">

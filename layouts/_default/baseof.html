@@ -13,8 +13,7 @@
 {{- end -}}<!---->
 {{- end -}}<!---->
 
-<html lang="{{- or site.LanguageCode site.Language.Lang -}}"
-  dir="{{- if site.Params.direction -}}{{- site.Params.direction -}}{{- else -}}ltr{{- end -}}">
+<html lang="{{- or site.LanguageCode site.Language.Lang -}}">
 {{- partial "head.html" . -}}
 
 <body class="flex flex-col h-dvh items-center max-w-(--w) mx-auto">

@@ -33,20 +33,59 @@ header nav a.active {
   font-weight: 600;
 }
 
-.prose hr {
-  border: 0;
-  height: var(--text-xl--line-height);
-  margin-block: 1.25em;
-}
-
-.prose hr::before {
-  content: "❧";
-  display: block;
-  text-align: center;
-}
-
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   @apply font-medium;
+}
+
+@utility prose {
+  :lang(en) {
+    @apply hyphens-auto;
+  }
+
+  main {
+    @apply text-justify [text-justify:inter-ideograph];
+  }
+
+  blockquote {
+    @apply not-italic;
+
+    p::before,
+    p::after {
+      @apply content-none;
+    }
+  }
+
+  hr {
+    @apply border-0 h-(--text-2xl--line-height) my-[1.25em] text-2xl;
+
+    &::before {
+      content: "❧";
+      @apply block text-center;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:hover {
+      a::after {
+        content: "#"
+      }
+    }
+
+    &:target {
+      @apply scroll-mt-6;
+    }
+  }
+
+  img {
+    @apply mx-auto rounded;
+  }
 }

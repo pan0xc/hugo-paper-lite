@@ -1,0 +1,17 @@
+<figure>
+  <blockquote{{ with .Attributes.cite }} cite="{{ . }}"{{ end }}>
+    {{ .Text }}
+  </blockquote>
+
+  {{ with .Attributes.caption }}
+    <figcaption class="text-right">
+      <cite>
+        {{ with $.Attributes.cite }}
+          <a href="{{ . }}">{{ $.Attributes.caption }}</a>
+        {{ else }}
+          {{ . | safeHTML }}
+        {{ end }}
+      </cite>
+    </figcaption>
+  {{ end }}
+</figure>
