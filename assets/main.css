@@ -242,19 +242,19 @@ button:not(#\#):not(#\#), input:where([type="button"], [type="reset"], [type="su
   text-align: center;
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#) h2:hover a::after {
-  content: "#";
+  content: "¶";
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#) h3:hover a::after {
-  content: "#";
+  content: "¶";
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#) h4:hover a::after {
-  content: "#";
+  content: "¶";
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#) h5:hover a::after {
-  content: "#";
+  content: "¶";
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#) h6:hover a::after {
-  content: "#";
+  content: "¶";
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#) h2:target {
   scroll-margin-top: calc(var(--spacing) * 6);

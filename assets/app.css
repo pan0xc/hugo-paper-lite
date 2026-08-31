@@ -76,7 +76,7 @@ h6 {
   h6 {
     &:hover {
       a::after {
-        content: "#"
+        content: "¶"
       }
     }
 
