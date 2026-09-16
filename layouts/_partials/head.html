@@ -1,6 +1,5 @@
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <!-- title -->
@@ -18,7 +17,7 @@
   <meta name="description" content="{{ .Params.Description | default (.Summary | plainify | truncate 160) }}" />
   <meta name="author" content="{{ if .Params.authors }}{{ delimit .Params.authors ", " }}{{ else }}{{ $author }}{{ end }}" />
   {{- else -}}
-  <meta name="description" content="{{ site.Params.description | default " A personal blog" }}" />
+  <meta name="description" content="{{ site.Params.description | default "A personal blog" }}" />
   <meta name="author" content="{{ $author }}" />
   {{- end -}}
 
