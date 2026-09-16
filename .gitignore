@@ -2,3 +2,4 @@
 /public
 .hugo_build.lock
 /data/blogroll.*
+/scripts/node_modules

@@ -1,0 +1,11 @@
+{
+    "name": "paper-lite-rss",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "feed": "node blogroll.ts"
+    },
+    "devDependencies": {
+        "rss-parser": "^3.13.0"
+    }
+}
