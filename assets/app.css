@@ -33,6 +33,60 @@ header nav a.active {
   font-weight: 600;
 }
 
+header dialog {
+  position: fixed;
+  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border: none;
+  
+  transform: translateY(100%);
+  transition:
+    transform 300ms ease,
+    display 300ms allow-discrete,
+    overlay 300ms allow-discrete;
+}
+
+header dialog[open] {
+  transform: translateY(0);
+}
+
+header dialog::backdrop {
+  background: transparent;
+  
+  transition:
+    opacity 300ms ease,
+    display 300ms allow-discrete,
+    overlay 300ms allow-discrete;
+}
+
+@starting-style {
+  header dialog[open] {
+    transform: translateY(100%);
+  }
+}
+
+header #open-menu,
+header #close-menu {
+  position: fixed;
+  top: auto;
+  right: 1.5rem;
+}
+
+header #close-menu {
+  visibility: hidden;
+}
+
+header:has(#menu-modal[open]) #open-menu {
+  visibility: hidden;
+}
+
+header:has(#menu-modal[open]) #close-menu {
+  visibility: visible;
+}
+
 h1,
 h2,
 h3,
