@@ -88,4 +88,8 @@ h6 {
   img {
     @apply mx-auto rounded;
   }
+
+  img.avatar {
+    @apply size-16 shrink-0 rounded-full object-cover transition-transform duration-300 hover:-rotate-6;
+  }
 }
