@@ -14,12 +14,12 @@
 
   <nav class="md:hidden flex items-center gap-8 w-full">
     <a class="hover:underline text-xl py-2" href="/">{{ site.Title }}</a>
-    <button id="open-menu" command="show-modal" commandfor="menu-modal">
+    <button id="open-menu" command="show-modal" commandfor="menu-modal" aria-label="open menu">
       <svg class="size-6">
         <use href="/icons.svg#menu"></use>
       </svg>
     </button>
-    <button id="close-menu" command="close" commandfor="menu-modal">
+    <button id="close-menu" command="close" commandfor="menu-modal" aria-label="close menu">
       <svg class="size-6">
         <use href="/icons.svg#close"></use>
       </svg>
