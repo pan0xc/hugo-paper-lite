@@ -41,7 +41,7 @@ header dialog {
   max-width: none;
   max-height: none;
   border: none;
-  
+
   transform: translateY(100%);
   transition:
     transform 300ms ease,
@@ -55,7 +55,7 @@ header dialog[open] {
 
 header dialog::backdrop {
   background: transparent;
-  
+
   transition:
     opacity 300ms ease,
     display 300ms allow-discrete,
@@ -138,5 +138,17 @@ h6 {
 
   img.avatar {
     @apply size-16 shrink-0 rounded-full object-cover transition-transform duration-300 hover:-rotate-6;
+  }
+
+  code {
+
+    &::before,
+    &::after {
+      @apply content-none;
+    }
+  }
+
+  :not(pre)>code {
+    @apply bg-gray-200 dark:bg-gray-800 rounded px-1 py-0.5;
   }
 }
