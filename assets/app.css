@@ -68,13 +68,6 @@ header dialog::backdrop {
   }
 }
 
-header #open-menu,
-header #close-menu {
-  position: fixed;
-  top: auto;
-  right: 1.5rem;
-}
-
 header #close-menu {
   visibility: hidden;
 }
@@ -102,7 +95,7 @@ h6 {
   }
 
   main {
-    @apply text-justify [text-justify:inter-ideograph];
+    @apply text-justify [text-justify:inter-ideograph] wrap-break-word;
   }
 
   blockquote {
