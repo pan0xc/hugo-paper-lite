@@ -68,15 +68,39 @@ header dialog::backdrop {
   }
 }
 
+header #open-menu,
 header #close-menu {
+  transition:
+    opacity 300ms ease,
+    scale 300ms ease,
+    rotate 300ms ease,
+    visibility 300ms allow-discrete;
+}
+
+header #open-menu {
+  opacity: 1;
+  scale: 1;
+  rotate: 0deg;
+}
+
+header #close-menu {
+  opacity: 0;
+  scale: 0;
+  rotate: -90deg;
   visibility: hidden;
 }
 
 header:has(#menu-modal[open]) #open-menu {
+  opacity: 0;
+  scale: 0;
+  rotate: 90deg;
   visibility: hidden;
 }
 
 header:has(#menu-modal[open]) #close-menu {
+  opacity: 1;
+  scale: 1;
+  rotate: 0deg;
   visibility: visible;
 }
 
