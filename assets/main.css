@@ -1202,29 +1202,25 @@ header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):n
 }
 header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) #open-menu,
 header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) #close-menu {
-  transition: opacity 300ms ease, scale 300ms ease, rotate 300ms ease, visibility 300ms allow-discrete;
+  transition: opacity 300ms ease, scale 300ms ease, visibility 300ms;
 }
 header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) #open-menu {
   opacity: 1;
   scale: 1;
-  rotate: 0deg;
 }
 header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) #close-menu {
   opacity: 0;
   scale: 0;
-  rotate: -90deg;
   visibility: hidden;
 }
 header:has(#menu-modal[open]):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) #open-menu {
   opacity: 0;
   scale: 0;
-  rotate: 90deg;
   visibility: hidden;
 }
 header:has(#menu-modal[open]):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) #close-menu {
   opacity: 1;
   scale: 1;
-  rotate: 0deg;
   visibility: visible;
 }
 h1:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#),
