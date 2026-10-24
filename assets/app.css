@@ -159,6 +159,10 @@ h6 {
     @apply size-16 shrink-0 rounded-full object-cover transition-transform duration-300 hover:-rotate-6;
   }
 
+  video {
+    @apply mx-auto rounded;
+  }
+
   code {
 
     &::before,

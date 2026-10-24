@@ -300,6 +300,11 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
     rotate: calc(6deg * -1);
   }
 }
+.prose:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) video {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.25rem;
+}
 .prose:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) code::before {
   --tw-content: none;
   content: none;
