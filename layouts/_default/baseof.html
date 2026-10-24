@@ -16,11 +16,11 @@
 <html lang="{{- or site.LanguageCode site.Language.Lang -}}">
 {{- partial "head.html" . -}}
 
-<body class="flex flex-col h-dvh items-center max-w-(--w) mx-auto">
+<body class="flex flex-col h-dvh items-center max-w-[48rem] mx-auto">
   {{- partial "header.html" . -}}
 
   <main
-    class="min-h-0 w-full flex-1 p-6 overflow-y-auto">
+    class="min-h-0 w-full flex-1 overflow-y-auto p-6 space-y-section">
     {{- block "main" . -}}{{- end -}}
   </main>
 
