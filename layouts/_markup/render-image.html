@@ -1,13 +1,30 @@
+{{- $img := .Page.Resources.Get .Destination -}}
+{{- if not $img }}{{ $img = resources.Get .Destination }}{{ end -}}
+
+{{- $src := .Destination | safeURL -}}
+{{- $w := 0 -}}
+{{- $h := 0 -}}
+{{- if $img -}}
+  {{ $s := $img.Resize (printf "%dx avif" $img.Width) }}
+  {{- $src = $s.RelPermalink -}}
+  {{- $w = $s.Width -}}
+  {{- $h = $s.Height -}}
+{{- end -}}
+
 {{- if .IsBlock -}}
   <figure>
-    <img src="{{ .Destination | safeURL }}"
+    <img src="{{ $src }}"
+      {{- if $w }} width="{{ $w }}" height="{{ $h }}"{{ end -}}
       {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+      loading="lazy" decoding="async"
     >
     {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
   </figure>
 {{- else -}}
-  <img src="{{ .Destination | safeURL }}"
+  <img src="{{ $src }}"
+    {{- if $w }} width="{{ $w }}" height="{{ $h }}"{{ end -}}
     {{- with .PlainText }} alt="{{ . }}"{{ end -}}
     {{- with .Title }} title="{{ . }}"{{ end -}}
+    loading="lazy" decoding="async"
   >
 {{- end -}}
