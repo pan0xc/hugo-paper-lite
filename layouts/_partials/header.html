@@ -34,7 +34,7 @@
       {{ if $.IsMenuCurrent .Menu . }}
       <a class="hover:underline active block text-center text-fluid-h2 py-2" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
       {{ else }}
-      <a class="hover:underline text-h2 py-2" href="{{ .URL }}">{{ .Name }}</a>
+      <a class="hover:underline text-fluid-h2 py-2" href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
       {{- end -}}
     </nav>
