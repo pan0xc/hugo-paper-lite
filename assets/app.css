@@ -24,7 +24,7 @@ a:focus {
 
 header nav a {
   opacity: 0.8;
-  transition: opacity .2s;
+  transition: opacity 200ms ease;
 }
 
 header nav a.active {

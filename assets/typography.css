@@ -1,65 +1,70 @@
 :root {
-    --step--2: clamp(0.4924rem, 0.4856rem + 0.0303vw, 0.5002rem);
-    --step--1: clamp(0.6564rem, 0.6116rem + 0.1992vw, 0.7072rem);
-    --step-0: clamp(0.875rem, 0.7647rem + 0.4902vw, 1rem);
-    --step-1: clamp(1.1664rem, 0.9479rem + 0.9711vw, 1.414rem);
-    --step-2: clamp(1.5548rem, 1.1625rem + 1.7436vw, 1.9994rem);
+  --step--2: clamp(0.4924rem, 0.4856rem + 0.0303vw, 0.5002rem);
+  --step--1: clamp(0.6564rem, 0.6116rem + 0.1992vw, 0.7072rem);
+  --step-0: clamp(0.875rem, 0.7647rem + 0.4902vw, 1rem);
+  --step-1: clamp(1.1664rem, 0.9479rem + 0.9711vw, 1.414rem);
+  --step-2: clamp(1.5548rem, 1.1625rem + 1.7436vw, 1.9994rem);
 
-    --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
-    --space-2xs: clamp(0.4375rem, 0.3654rem + 0.3205vw, 0.5rem);
-    --space-xs: clamp(0.6875rem, 0.6154rem + 0.3205vw, 0.75rem);
-    --space-s: clamp(0.875rem, 0.7308rem + 0.641vw, 1rem);
-    --space-m: clamp(1.3125rem, 1.0962rem + 0.9615vw, 1.5rem);
-    --space-l: clamp(1.75rem, 1.4615rem + 1.2821vw, 2rem);
-    --space-xl: clamp(2.625rem, 2.1923rem + 1.9231vw, 3rem);
-    --space-2xl: clamp(3.5rem, 2.9231rem + 2.5641vw, 4rem);
-    --space-3xl: clamp(5.25rem, 4.3846rem + 3.8462vw, 6rem);
+  --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
+  --space-2xs: clamp(0.4375rem, 0.3654rem + 0.3205vw, 0.5rem);
+  --space-xs: clamp(0.6875rem, 0.6154rem + 0.3205vw, 0.75rem);
+  --space-s: clamp(0.875rem, 0.7308rem + 0.641vw, 1rem);
+  --space-m: clamp(1.3125rem, 1.0962rem + 0.9615vw, 1.5rem);
+  --space-l: clamp(1.75rem, 1.4615rem + 1.2821vw, 2rem);
+  --space-xl: clamp(2.625rem, 2.1923rem + 1.9231vw, 3rem);
+  --space-2xl: clamp(3.5rem, 2.9231rem + 2.5641vw, 4rem);
+  --space-3xl: clamp(5.25rem, 4.3846rem + 3.8462vw, 6rem);
 
-    /* One-up pairs */
-    --space-3xs-2xs: clamp(0.25rem, -0.0385rem + 1.2821vw, 0.5rem);
-    --space-2xs-xs: clamp(0.4375rem, 0.0769rem + 1.6026vw, 0.75rem);
-    --space-xs-s: clamp(0.6875rem, 0.3269rem + 1.6026vw, 1rem);
-    --space-s-m: clamp(0.875rem, 0.1538rem + 3.2051vw, 1.5rem);
-    --space-m-l: clamp(1.3125rem, 0.5192rem + 3.5256vw, 2rem);
-    --space-l-xl: clamp(1.75rem, 0.3077rem + 6.4103vw, 3rem);
-    --space-xl-2xl: clamp(2.625rem, 1.0385rem + 7.0513vw, 4rem);
-    --space-2xl-3xl: clamp(3.5rem, 0.6154rem + 12.8205vw, 6rem);
+  --space-3xs-2xs: clamp(0.25rem, -0.0385rem + 1.2821vw, 0.5rem);
+  --space-2xs-xs: clamp(0.4375rem, 0.0769rem + 1.6026vw, 0.75rem);
+  --space-xs-s: clamp(0.6875rem, 0.3269rem + 1.6026vw, 1rem);
+  --space-s-m: clamp(0.875rem, 0.1538rem + 3.2051vw, 1.5rem);
+  --space-m-l: clamp(1.3125rem, 0.5192rem + 3.5256vw, 2rem);
+  --space-l-xl: clamp(1.75rem, 0.3077rem + 6.4103vw, 3rem);
+  --space-xl-2xl: clamp(2.625rem, 1.0385rem + 7.0513vw, 4rem);
+  --space-2xl-3xl: clamp(3.5rem, 0.6154rem + 12.8205vw, 6rem);
 
-    /* Custom pairs */
-    --space-s-l: clamp(0.875rem, -0.4231rem + 5.7692vw, 2rem);
+  --space-s-l: clamp(0.875rem, -0.4231rem + 5.7692vw, 2rem);
 
+  --line-height-xs: 1.6;
+  --line-height-sm: 1.55;
+  --line-height-base: 1.75;
+  --line-height-lg: 1.35;
+  --line-height-xl: 1.25;
+  --line-height-2xl: 1.2;
+  --line-height-3xl: 1.15;
 
-
-    --line-height-xs: 1.6;
-    --line-height-sm: 1.55;
-    --line-height-base: 1.75;
-    --line-height-lg: 1.35;
-    --line-height-xl: 1.25;
-    --line-height-2xl: 1.2;
-    --line-height-3xl: 1.15;
-
-
-
-    --line-height-h1: var(--line-height-3xl);
-    --line-height-h2: var(--line-height-2xl);
-    --line-height-h3: var(--line-height-xl);
+  --line-height-h1: var(--line-height-3xl);
+  --line-height-h2: var(--line-height-2xl);
+  --line-height-h3: var(--line-height-xl);
 }
 
 @theme inline {
-    --text-h1: var(--step-2);
-    --text-h1--line-height: var(--line-height-h1);
-    --text-h2: var(--step-1);
-    --text-h2--line-height: var(--line-height-h2);
-    --text-h3: var(--step-0);
-    --text-h3--line-height: var(--line-height-h3);
-    --text-subtle: var(--step-0);
-    --text-subtle--line-height: var(--line-height-base);
+  --text-fluid-h1: var(--step-2);
+  --text-fluid-h1--line-height: var(--line-height-h1);
+  --text-fluid-h2: var(--step-1);
+  --text-fluid-h2--line-height: var(--line-height-h2);
+  --text-fluid-h3: var(--step-0);
+  --text-fluid-h3--line-height: var(--line-height-h3);
+  --text-fluid-subtle: var(--step-0);
+  --text-fluid-subtle--line-height: var(--line-height-base);
+  --text-fluid-body: var(--step-0);
+  --text-fluid-body--line-height: var(--line-height-base);
+  --text-fluid-xs: var(--step--2);
+  --text-fluid-xs--line-height: var(--line-height-base);
+  --text-fluid-sm: var(--step--1);
+  --text-fluid-sm--line-height: var(--line-height-base);
 
-    --space-list: var(--space-s);
-    --space-section: var(--space-2xl);
-    --space-page: var(--space-l);
-    --space-line: var(--space-xs);
-    --space-inline: var(--space-xs);
+
+  --spacing-fluid-3xs: var(--space-3xs);
+  --spacing-fluid-2xs: var(--space-2xs);
+  --spacing-fluid-xs: var(--space-xs);
+  --spacing-fluid-s: var(--space-s);
+  --spacing-fluid-m: var(--space-m);
+  --spacing-fluid-l: var(--space-l);
+  --spacing-fluid-xl: var(--space-xl);
+  --spacing-fluid-2xl: var(--space-2xl);
+  --spacing-fluid-3xl: var(--space-3xl);
 }
 
 @utility prose {
@@ -124,10 +129,6 @@
 
   img {
     @apply mx-auto rounded;
-  }
-
-  img.avatar {
-    @apply size-16 shrink-0 rounded-full object-cover transition-transform duration-300 hover:-rotate-6;
   }
 
   video {
