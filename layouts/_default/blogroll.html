@@ -1,24 +1,24 @@
 {{- define "main" -}}
 
 <section>
-<ul class="space-y-list">
-{{ range .Site.Data.blogroll }}
+  <ul class="space-y-fluid-xs">
+    {{ range .Site.Data.blogroll }}
     <li class="relative">
-      <span class="text-gray-500 dark:text-gray-400">
+      <span class="text-fluid-subtle text-gray-500 dark:text-gray-400">
         <time>
           {{ time.Format ":date_medium" .date }}
         </time>
         {{ (urls.Parse .url).Host }}
       </span>
-      <h2 class="text-h2 min-w-0 truncate">
-          {{ .title }}
+      <h2 class="text-fluid-h2 min-w-0 truncate">
+        {{ .title }}
       </h2>
-      <a class="absolute inset-0 text-[0px]" href="{{- .url -}}">
+      <a class="absolute inset-0 text-[0px]" href="{{- .url -}}" title="{{- .title -}}" aria-label="{{- .title -}}">
         {{- .title -}}
       </a>
     </li>
-{{ end }}
-</ul>
+    {{ end }}
+  </ul>
 </section>
 
 {{- end }}

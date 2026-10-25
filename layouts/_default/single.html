@@ -1,10 +1,10 @@
 {{- define "main" -}}
 
 
-<header class="space-y-line">
-  <h1 class="text-h1">{{ .Title }}</h1>
+<header class="space-y-fluid-s">
+  <h1 class="text-fluid-h1">{{ .Title }}</h1>
   {{- if ne .Type "page" }}
-  <div class="text-subtle text-gray-500 dark:text-gray-400">
+  <div class="text-fluid-subtle text-gray-500 dark:text-gray-400">
     {{- if .Date }}
     <time>{{ .Date | time.Format ":date_medium" }}</time>
     {{- end }}
@@ -18,12 +18,14 @@
 <article class="
   prose
   dark:prose-invert
+  mx-auto
+  max-w-none
 ">
   {{- .Content -}}
 </article>
 
 <footer>
-  <nav class="flex flex-wrap justify-center gap-x-8">
+  <nav class="flex flex-wrap justify-center gap-x-fluid-xl">
     {{ if site.Params.article.showEditLink | default true }}
     {{ with site.Params.repo }}
     {{ $repo := . }}

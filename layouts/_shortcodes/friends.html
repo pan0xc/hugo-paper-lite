@@ -1,15 +1,15 @@
-<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 list-none p-0">
+<ul class="grid grid-cols-1 gap-fluid-s sm:grid-cols-2 not-prose">
     {{ range site.Data.friends }}
-    <li class="pl-0">
+    <li>
         <a href="{{ .url }}"
-            class="group flex items-center gap-4 rounded-xl px-4 border border-gray-300/80 dark:border-gray-700/80 no-underline"
+            class="flex gap-fluid-s rounded-xl px-2 py-4 border border-gray-300/80 dark:border-gray-700/80"
             target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
-            <img src="{{ .avatar }}" alt="{{ .name }}" class="avatar" loading="lazy" />
+            <img src="{{ .avatar }}" alt="{{ .name }}" class="size-fluid-2xl shrink-0 m-0! rounded-full! object-cover transition-transform duration-300 hover:-rotate-6" loading="lazy" />
 
             <div class="text-left">
-                <h4 title="{{ .name }}">
+                <h3 class="text-fluid-h3" title="{{ .name }}">
                     {{ .name }}
-                </h4>
+                </h3>
                 <p class="line-clamp-2 text-sm text-gray-500 dark:text-gray-400" title="{{ .description }}">
                     {{ .description }}
                 </p>
