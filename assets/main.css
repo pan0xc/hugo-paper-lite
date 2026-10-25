@@ -856,15 +856,15 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
 .gap-fluid-s:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   gap: var(--space-s);
 }
-:where(.space-y-fluid-3xl > :not(:last-child)):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(var(--space-3xl) * var(--tw-space-y-reverse));
-  margin-bottom: calc(var(--space-3xl) * (1 - var(--tw-space-y-reverse)));
-}
 :where(.space-y-fluid-s > :not(:last-child)):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   --tw-space-y-reverse: 0;
   margin-top: calc(var(--space-s) * var(--tw-space-y-reverse));
   margin-bottom: calc(var(--space-s) * (1 - var(--tw-space-y-reverse)));
+}
+:where(.space-y-fluid-xl > :not(:last-child)):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(var(--space-xl) * var(--tw-space-y-reverse));
+  margin-bottom: calc(var(--space-xl) * (1 - var(--tw-space-y-reverse)));
 }
 :where(.space-y-fluid-xs > :not(:last-child)):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   --tw-space-y-reverse: 0;
