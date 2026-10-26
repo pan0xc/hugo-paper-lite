@@ -18,7 +18,7 @@
       {{- with .PlainText }} alt="{{ . }}"{{ end -}}
       loading="lazy" decoding="async"
     >
-    {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+    {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end -}}
   </figure>
 {{- else -}}
   <img src="{{ $src }}"
