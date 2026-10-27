@@ -13,7 +13,7 @@
 {{- end -}}<!---->
 {{- end -}}<!---->
 
-<html lang="{{- or site.LanguageCode site.Language.Lang -}}">
+<html lang="{{- .Site.Language.Locale -}}">
 {{- partial "head.html" . -}}
 
 <body class="flex flex-col h-dvh items-center max-w-[48rem] mx-auto">
