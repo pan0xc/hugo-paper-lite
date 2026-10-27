@@ -11,12 +11,20 @@
   {{- $h = $s.Height -}}
 {{- end -}}
 
+{{- $attrs := .Attributes -}}
+{{- $loading := $attrs.loading | default "lazy" -}}
+{{- $fetchpriority := $attrs.fetchpriority | default "auto" -}}
+{{- $decoding := $attrs.decoding | default "async" -}}
+
 {{- if .IsBlock -}}
   <figure>
     <img src="{{ $src }}"
       {{- if $w }} width="{{ $w }}" height="{{ $h }}"{{ end -}}
       {{- with .PlainText }} alt="{{ . }}"{{ end -}}
-      loading="lazy" decoding="async"
+
+      loading="{{ $loading }}"
+      fetchpriority="{{ $fetchpriority }}"
+      decoding="{{ $decoding }}"
     >
     {{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end -}}
   </figure>
@@ -25,6 +33,9 @@
     {{- if $w }} width="{{ $w }}" height="{{ $h }}"{{ end -}}
     {{- with .PlainText }} alt="{{ . }}"{{ end -}}
     {{- with .Title }} title="{{ . }}"{{ end -}}
-    loading="lazy" decoding="async"
+    
+    loading="{{ $loading }}"
+    fetchpriority="{{ $fetchpriority }}"
+    decoding="{{ $decoding }}"
   >
 {{- end -}}
