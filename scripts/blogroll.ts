@@ -13,17 +13,19 @@ interface Feed {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const paperLiteDir = path.resolve(__dirname, '..');
 const repoDir = path.resolve(paperLiteDir, '../..');
+const customDir = path.resolve(repoDir, 'site/data');
 
 const paths = [
-    path.join(paperLiteDir, 'blogroll.txt'),
-    path.join(repoDir, 'blogroll.txt'),
+    path.join(paperLiteDir, 'blogurls.json'),
+    path.join(repoDir, 'blogurls.json'),
+    path.join(customDir, 'blogurls.json'),
 ];
 
 const outputPath = path.join(paperLiteDir, 'data/blogroll.json');
 
 const parser = new Parser();
 
-async function getBlogrollPath(): Promise<string> {
+async function getBlogUrlsPath(): Promise<string> {
     for (const path of paths) {
         const exists = await fs.promises
             .access(path, fs.constants.F_OK)
@@ -31,7 +33,7 @@ async function getBlogrollPath(): Promise<string> {
             .catch(() => false);
         if (exists) return path;
     }
-    throw new Error('Blogroll file not found');
+    throw new Error('Blogurls file not found');
 }
 
 async function feed(url: string): Promise<Feed[]> {
@@ -48,12 +50,11 @@ async function feed(url: string): Promise<Feed[]> {
 }
 
 async function main() {
-    const path = await getBlogrollPath();
+    const path = await getBlogUrlsPath();
 
-    const urls = (await fs.promises.readFile(path, 'utf-8'))
-        .split('\n')
-        .map(line => line.trim())
-        .filter(Boolean);
+    const urls = JSON.parse(
+        await fs.promises.readFile(path, 'utf-8'),
+    );
 
     const feeds = (await Promise.all(urls.map(feed)))
         .flat()
