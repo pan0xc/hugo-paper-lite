@@ -30,7 +30,7 @@
     {{ with site.Params.repo }}
     {{ $repo := . }}
     {{ with $.File }}
-    <a class="flex items-center gap-2" href="{{ urls.JoinPath $repo.url $repo.editPath $repo.branch " content" .Path}}"
+    <a class="flex items-center gap-2" href="{{ urls.JoinPath $repo.url $repo.editPath $repo.branch "content" .Path}}"
       target="_blank" rel="noopener noreferrer">
       <svg class="size-4">
         <use href="/icons.svg#edit"></use>
