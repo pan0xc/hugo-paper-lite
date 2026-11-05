@@ -75,19 +75,19 @@
   <nav class="grid grid-cols-3 items-center">
     <div>
       {{- with $paginator.Prev }}
-        <a class="text-fluid-h3" href="{{ .URL }}">
+        <a class="text-fluid-subtle" href="{{ .URL }}">
           ← {{ i18n "prev_page" }}
         </a>
       {{- end }}
     </div>
 
-    <div class="text-center text-fluid-h3 opacity-60">
+    <div class="text-center text-fluid-subtle opacity-60">
       {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}
     </div>
 
     <div class="text-right">
       {{- with $paginator.Next }}
-        <a class="text-fluid-h3" href="{{ .URL }}">
+        <a class="text-fluid-subtle" href="{{ .URL }}">
           {{ i18n "next_page" }} →
         </a>
       {{- end }}
