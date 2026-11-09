@@ -2,13 +2,13 @@
 
 {{/* Tag title */}}
 {{- if and .Title (eq .Type "tags") }}
-  <h1 class="mb-14">#{{ .Title }}</h1>
+<h1 class="mb-14">#{{ .Title }}</h1>
 {{- end }}
 
 {{/* Pages */}}
 {{- $pages := union .RegularPages .Sections }}
 {{- if .IsHome }}
-  {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- end }}
 
 {{/* Pagination */}}
@@ -16,83 +16,81 @@
 
 {{/* Homepage avatar */}}
 {{- if .IsHome }}
-  {{- $avatar := $.Scratch.Get "avatar" }}
+{{- $avatar := $.Scratch.Get "avatar" }}
 
-  {{- if or $avatar site.Params.author.name }}
-    <section class="flex flex-col items-center gap-y-fluid-2xs">
-      {{- with $avatar }}
-        <div class="size-fluid-3xl shrink-0 rounded-full outline-4">
-          <img
-            class="rounded-full object-cover transition-transform duration-300 hover:-rotate-6"
-            src="{{ . }}"
-            alt="{{ site.Params.author.name | default site.Title }}"
-          />
-        </div>
-      {{- end }}
-
-      {{- with site.Params.author.name }}
-        <h1 class="text-fluid-h1">
-          {{ . }}
-        </h1>
-
-        <p class="text-gray-500 dark:text-gray-400 wrap-break-word text-fluid-subtle">
-          {{ site.Params.author.bio | default (printf "A personal blog by %s" .) }}
-        </p>
-      {{- end }}
-    </section>
+{{- if or $avatar site.Params.author.name }}
+<section class="flex flex-col items-center gap-y-fluid-2xs">
+  {{- with $avatar }}
+  <div class="size-fluid-3xl shrink-0 rounded-full outline outline-gray-200/80 dark:outline-gray-700/80">
+    <img class="rounded-full object-cover transition-transform duration-300 hover:-rotate-6" src="{{ . }}"
+      alt="{{ site.Params.author.name | default site.Title }}" />
+  </div>
   {{- end }}
+
+  {{- with site.Params.author.name }}
+  <h1 class="text-fluid-h1">
+    {{ . }}
+  </h1>
+
+  <p class="text-gray-500 dark:text-gray-400 wrap-break-word text-fluid-subtle">
+    {{ site.Params.author.bio | default (printf "A personal blog by %s" .) }}
+  </p>
+  {{- end }}
+</section>
+{{- end }}
 {{- end }}
 
 {{/* Articles */}}
 <section>
   <ul class="space-y-fluid-s">
     {{- range $paginator.Pages }}
-      <li class="relative">
-        <span class="text-fluid-subtle text-gray-500 dark:text-gray-400">
-          <time>
+    <li class="relative hover:underline decoration-2">
+      <span class="text-fluid-subtle text-gray-500 dark:text-gray-400">
+        <time>
           {{ .Date | time.Format ":date_medium" }}
-          </time>
-        </span>
-        <h2 class="text-fluid-h2 min-w-0 truncate">
-          {{ .Title }}
-        </h2>
+        </time>
+      </span>
+      <h2 class="text-fluid-h2 min-w-0 truncate">
+        {{ .Title }}
+      </h2>
 
-        <a
-          class="absolute inset-0 text-[0px]"
-          href="{{ .RelPermalink }}"
-          title="{{ .Title }}"
-          aria-label="{{ .Title }}"
-        >
-          {{ .Title }}
-        </a>
-      </li>
+      <a class="absolute inset-0 text-[0px]" href="{{ .RelPermalink }}" title="{{ .Title }}" aria-label="{{ .Title }}">
+        {{ .Title }}
+      </a>
+    </li>
     {{- end }}
   </ul>
 </section>
 
 {{/* Pagination navigation */}}
 {{- if gt $paginator.TotalPages 1 }}
-  <nav class="grid grid-cols-3 items-center">
-    <div>
-      {{- with $paginator.Prev }}
-        <a class="text-fluid-subtle" href="{{ .URL }}">
-          ← {{ i18n "prev_page" }}
-        </a>
-      {{- end }}
-    </div>
+<nav class="grid grid-cols-3 items-center">
+  <div>
+    {{- with $paginator.Prev }}
+    <a class="inline-flex items-center rounded-full px-fluid-s py-fluid-3xs
+         text-fluid-sm
+         hover:bg-gray-200/80 dark:hover:bg-gray-700/80
+         transition-colors" href="{{ .URL }}">
+      {{ i18n "prev_page" }}
+    </a>
+    {{- end }}
+  </div>
 
-    <div class="text-center text-fluid-subtle opacity-60">
-      {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}
-    </div>
+  <div class="text-center text-fluid-sm opacity-60">
+    {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}
+  </div>
 
-    <div class="text-right">
-      {{- with $paginator.Next }}
-        <a class="text-fluid-subtle" href="{{ .URL }}">
-          {{ i18n "next_page" }} →
-        </a>
-      {{- end }}
-    </div>
-  </nav>
+  <div class="text-right">
+    {{- with $paginator.Next }}
+    <a class="inline-flex items-center rounded-full px-fluid-s py-fluid-3xs
+         text-fluid-sm
+         hover:bg-gray-200/80 dark:hover:bg-gray-700/80
+         transition-colors" href="{{ .URL }}">
+      {{ i18n "next_page" }}
+    </a>
+    {{- end }}
+  </div>
+</nav>
 {{- end }}
 
 {{- end }}

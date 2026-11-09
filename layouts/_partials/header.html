@@ -2,19 +2,19 @@
   {{- $url := .RelPermalink -}}<!---->
   {{- with site.Menus.main -}}
   <nav class="hidden md:flex items-center gap-x-fluid-xl w-full">
-    <a class="hover:underline grow-2 py-2 text-fluid-h3" href="/">{{ site.Title }}</a>
+    <a class="grow-2 py-2 text-fluid-h3" href="/">{{ site.Title }}</a>
     {{- range . -}}
-    {{ if $.IsMenuCurrent .Menu . }}
-    <a class="hover:underline active block text-fluid-h3 py-2" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
-    {{ else }}
-    <a class="hover:underline text-fluid-h3 py-2" href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
+    <a
+      class="text-fluid-h3 py-fluid-2xs hover:underline aria-[current=page]:underline decoration-2"
+      {{ if $.IsMenuCurrent .Menu . }}aria-current="page"{{ end }}
+      href="{{ .URL }}"
+    >{{ .Name }}</a>
     {{- end -}}
   </nav>
 
   <nav class="md:hidden flex items-center justify-between w-full">
-    <a class="hover:underline text-fluid-h3 py-2" href="/">{{ site.Title }}</a>
-    <div class="grid shrink-0">
+    <a class="text-fluid-h3" href="/">{{ site.Title }}</a>
+    <div class="grid shrink-0 place-items-center">
       <button id="open-menu" type="button" command="show-modal" commandfor="menu-modal" aria-label="open menu" class="col-start-1 row-start-1">
         <svg class="size-fluid-m">
           <use href="/icons.svg#menu"></use>
@@ -31,11 +31,10 @@
   <dialog id="menu-modal" closedby="any">
     <nav class="h-[calc(100%-4rem)] flex flex-col items-center justify-center gap-y-fluid-xl">
       {{- range . -}}
-      {{ if $.IsMenuCurrent .Menu . }}
-      <a class="hover:underline active block text-center text-fluid-h3 py-2" aria-current="page" href="{{ .URL }}">{{ .Name }}</a>
-      {{ else }}
-      <a class="hover:underline text-fluid-h3 py-2" href="{{ .URL }}">{{ .Name }}</a>
-      {{ end }}
+      <a 
+        class="text-fluid-h3 py-fluid-xs px-fluid-m hover:bg-gray-200/80 dark:hover:bg-gray-700/80 aria-[current=page]:bg-gray-200/80 dark:aria-[current=page]:bg-gray-700/80 rounded-full"
+        {{ if $.IsMenuCurrent .Menu . }}aria-current="page"{{ end }}
+        href="{{ .URL }}">{{ .Name }}</a>
       {{- end -}}
     </nav>
   </dialog>

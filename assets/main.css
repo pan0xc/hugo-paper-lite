@@ -286,12 +286,10 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
 .prose:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) img {
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0.25rem;
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) video {
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0.25rem;
 }
 .prose:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) code::before {
   --tw-content: none;
@@ -763,6 +761,9 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
 .hidden:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   display: none;
 }
+.inline-flex:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  display: inline-flex;
+}
 .size-4:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   width: calc(var(--spacing) * 4);
   height: calc(var(--spacing) * 4);
@@ -840,6 +841,10 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
 }
 .flex-wrap:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   flex-wrap: wrap;
+}
+.place-items-center:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  align-items: center;
+  justify-items: center;
 }
 .items-center:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   align-items: center;
@@ -953,6 +958,10 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
   padding-left: var(--space-m);
   padding-right: var(--space-m);
 }
+.px-fluid-s:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  padding-left: var(--space-s);
+  padding-right: var(--space-s);
+}
 .py-1:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   padding-top: var(--spacing);
   padding-bottom: var(--spacing);
@@ -964,6 +973,18 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
 .py-4:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   padding-top: calc(var(--spacing) * 4);
   padding-bottom: calc(var(--spacing) * 4);
+}
+.py-fluid-2xs:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  padding-top: var(--space-2xs);
+  padding-bottom: var(--space-2xs);
+}
+.py-fluid-3xs:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  padding-top: var(--space-3xs);
+  padding-bottom: var(--space-3xs);
+}
+.py-fluid-xs:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
 }
 .text-center:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   text-align: center;
@@ -993,6 +1014,10 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
   font-size: var(--step-1);
   line-height: var(--tw-leading, var(--line-height-h3));
 }
+.text-fluid-sm:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  font-size: var(--step--1);
+  line-height: var(--tw-leading, var(--line-height-base));
+}
 .text-fluid-subtle:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   font-size: var(--step-0);
   line-height: var(--tw-leading, var(--line-height-base));
@@ -1020,12 +1045,28 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
 .no-underline:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   text-decoration-line: none;
 }
+.decoration-2:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-decoration-thickness: 2px;
+}
 .opacity-60:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   opacity: 0.6;
 }
-.outline-4:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+.outline:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   outline-style: var(--tw-outline-style);
-  outline-width: 4px;
+  outline-width: 1px;
+}
+.outline-gray-200\/80:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  outline-color: rgba(229, 231, 235, 0.8);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .outline-gray-200\/80:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+    outline-color: color-mix(in oklab, var(--color-gray-200) 80%, transparent);
+  }
+}
+.transition-colors:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
 }
 .transition-transform:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   transition-property: transform, translate, scale, rotate;
@@ -1052,9 +1093,30 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
   }
 }
 @media (hover: hover) {
+  .hover\:bg-gray-200\/80:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+    background-color: rgba(229, 231, 235, 0.8);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .hover\:bg-gray-200\/80:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+      background-color: color-mix(in oklab, var(--color-gray-200) 80%, transparent);
+    }
+  }
+}
+@media (hover: hover) {
   .hover\:underline:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
     text-decoration-line: underline;
   }
+}
+.aria-\[current\=page\]\:bg-gray-200\/80[aria-current="page"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  background-color: rgba(229, 231, 235, 0.8);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .aria-\[current\=page\]\:bg-gray-200\/80[aria-current="page"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+    background-color: color-mix(in oklab, var(--color-gray-200) 80%, transparent);
+  }
+}
+.aria-\[current\=page\]\:underline[aria-current="page"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-decoration-line: underline;
 }
 @media (min-width: 40rem) {
   .sm\:grid-cols-2:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
@@ -1103,6 +1165,16 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
   }
 }
 @media (prefers-color-scheme: dark) {
+  .dark\:outline-gray-700\/80:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+    outline-color: rgba(54, 65, 83, 0.8);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .dark\:outline-gray-700\/80:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+      outline-color: color-mix(in oklab, var(--color-gray-700) 80%, transparent);
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
   .dark\:prose-invert:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
     --tw-prose-body: var(--tw-prose-invert-body);
     --tw-prose-headings: var(--tw-prose-invert-headings);
@@ -1126,6 +1198,18 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
 }
 @media (prefers-color-scheme: dark) {
   @media (hover: hover) {
+    .dark\:hover\:bg-gray-700\/80:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+      background-color: rgba(54, 65, 83, 0.8);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .dark\:hover\:bg-gray-700\/80:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+        background-color: color-mix(in oklab, var(--color-gray-700) 80%, transparent);
+      }
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  @media (hover: hover) {
     .dark\:hover\:bg-white\/12:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
       background-color: rgba(255, 255, 255, 0.12);
     }
@@ -1133,6 +1217,16 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
       .dark\:hover\:bg-white\/12:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
         background-color: color-mix(in oklab, var(--color-white) 12%, transparent);
       }
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .dark\:aria-\[current\=page\]\:bg-gray-700\/80[aria-current="page"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+    background-color: rgba(54, 65, 83, 0.8);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .dark\:aria-\[current\=page\]\:bg-gray-700\/80[aria-current="page"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+      background-color: color-mix(in oklab, var(--color-gray-700) 80%, transparent);
     }
   }
 }
@@ -1171,27 +1265,6 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
   --line-height-h1: var(--line-height-3xl);
   --line-height-h2: var(--line-height-2xl);
   --line-height-h3: var(--line-height-xl);
-}
-a:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  outline: 0 solid;
-  outline-offset: 0;
-  transition: outline-width 200ms ease, outline-offset 200ms ease;
-}
-a:focus-visible:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  outline-width: 2px;
-  outline-offset: 4px;
-}
-a:focus:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  outline-width: 2px;
-  outline-offset: 4px;
-}
-header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) nav a {
-  opacity: 0.8;
-  transition: opacity 200ms ease;
-}
-header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) nav a.active {
-  opacity: 1;
-  font-weight: 600;
 }
 header:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) dialog {
   position: fixed;

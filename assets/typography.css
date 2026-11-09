@@ -129,11 +129,11 @@
   }
 
   img {
-    @apply mx-auto rounded;
+    @apply mx-auto;
   }
 
   video {
-    @apply mx-auto rounded;
+    @apply mx-auto;
   }
 
   code {

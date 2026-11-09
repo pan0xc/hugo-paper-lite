@@ -4,34 +4,6 @@
 
 @plugin '@tailwindcss/typography';
 
-a {
-  outline: 0 solid;
-  outline-offset: 0;
-  transition:
-    outline-width 200ms ease,
-    outline-offset 200ms ease;
-}
-
-a:focus-visible {
-  outline-width: 2px;
-  outline-offset: 4px;
-}
-
-a:focus {
-  outline-width: 2px;
-  outline-offset: 4px;
-}
-
-header nav a {
-  opacity: 0.8;
-  transition: opacity 200ms ease;
-}
-
-header nav a.active {
-  opacity: 1;
-  font-weight: 600;
-}
-
 header dialog {
   position: fixed;
   margin-top: 4rem;
