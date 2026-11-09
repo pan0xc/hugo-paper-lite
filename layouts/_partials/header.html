@@ -32,7 +32,7 @@
     <nav class="h-[calc(100%-4rem)] flex flex-col items-center justify-center gap-y-fluid-xl">
       {{- range . -}}
       <a 
-        class="text-fluid-h3 py-fluid-xs px-fluid-m hover:bg-gray-200/80 dark:hover:bg-gray-700/80 aria-[current=page]:bg-gray-200/80 dark:aria-[current=page]:bg-gray-700/80 rounded-full"
+        class="text-fluid-h3 py-fluid-xs px-fluid-m active:bg-gray-200/80 dark:active:bg-gray-700/80 aria-[current=page]:bg-gray-200/80 dark:aria-[current=page]:bg-gray-700/80 rounded-full"
         {{ if $.IsMenuCurrent .Menu . }}aria-current="page"{{ end }}
         href="{{ .URL }}">{{ .Name }}</a>
       {{- end -}}

@@ -69,6 +69,7 @@
     {{- with $paginator.Prev }}
     <a class="inline-flex items-center rounded-full px-fluid-s py-fluid-3xs
          text-fluid-sm
+         active:bg-gray-200/80 dark:active:bg-gray-700/80
          hover:bg-gray-200/80 dark:hover:bg-gray-700/80
          transition-colors" href="{{ .URL }}">
       {{ i18n "prev_page" }}
@@ -84,6 +85,7 @@
     {{- with $paginator.Next }}
     <a class="inline-flex items-center rounded-full px-fluid-s py-fluid-3xs
          text-fluid-sm
+         active:bg-gray-200/80 dark:active:bg-gray-700/80
          hover:bg-gray-200/80 dark:hover:bg-gray-700/80
          transition-colors" href="{{ .URL }}">
       {{ i18n "next_page" }}

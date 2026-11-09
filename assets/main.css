@@ -1107,6 +1107,14 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
     text-decoration-line: underline;
   }
 }
+.active\:bg-gray-200\/80:active:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  background-color: rgba(229, 231, 235, 0.8);
+}
+@supports (color: color-mix(in lab, red, red)) {
+  .active\:bg-gray-200\/80:active:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+    background-color: color-mix(in oklab, var(--color-gray-200) 80%, transparent);
+  }
+}
 .aria-\[current\=page\]\:bg-gray-200\/80[aria-current="page"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   background-color: rgba(229, 231, 235, 0.8);
 }
@@ -1217,6 +1225,16 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
       .dark\:hover\:bg-white\/12:hover:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
         background-color: color-mix(in oklab, var(--color-white) 12%, transparent);
       }
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .dark\:active\:bg-gray-700\/80:active:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+    background-color: rgba(54, 65, 83, 0.8);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .dark\:active\:bg-gray-700\/80:active:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+      background-color: color-mix(in oklab, var(--color-gray-700) 80%, transparent);
     }
   }
 }
