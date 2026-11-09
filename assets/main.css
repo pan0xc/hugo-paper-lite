@@ -1115,6 +1115,9 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
     background-color: color-mix(in oklab, var(--color-gray-200) 80%, transparent);
   }
 }
+.active\:underline:active:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
+  text-decoration-line: underline;
+}
 .aria-\[current\=page\]\:bg-gray-200\/80[aria-current="page"]:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   background-color: rgba(229, 231, 235, 0.8);
 }
