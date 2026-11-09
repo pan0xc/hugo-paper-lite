@@ -67,8 +67,8 @@
 <nav class="grid grid-cols-3 items-center">
   <div>
     {{- with $paginator.Prev }}
-    <a class="inline-flex items-center rounded-full px-fluid-s py-fluid-3xs
-         text-fluid-sm
+    <a class="inline-flex items-center rounded-full py-fluid-3xs px-fluid-xs
+         text-fluid-subtle
          active:bg-gray-200/80 dark:active:bg-gray-700/80
          hover:bg-gray-200/80 dark:hover:bg-gray-700/80
          transition-colors" href="{{ .URL }}">
@@ -83,8 +83,8 @@
 
   <div class="text-right">
     {{- with $paginator.Next }}
-    <a class="inline-flex items-center rounded-full px-fluid-s py-fluid-3xs
-         text-fluid-sm
+    <a class="inline-flex items-center rounded-full py-fluid-3xs px-fluid-xs
+         text-fluid-subtle
          active:bg-gray-200/80 dark:active:bg-gray-700/80
          hover:bg-gray-200/80 dark:hover:bg-gray-700/80
          transition-colors" href="{{ .URL }}">

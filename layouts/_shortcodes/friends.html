@@ -4,13 +4,13 @@
         <a href="{{ .url }}"
             class="flex gap-fluid-s rounded-xl px-fluid-s py-fluid-xs border border-gray-300/80 dark:border-gray-700/80"
             target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
-            <img src="{{ .avatar }}" alt="{{ .name }}" class="size-fluid-3xl shrink-0 m-0! rounded-full! object-cover transition-transform duration-300 hover:-rotate-6" loading="lazy" />
+            <img src="{{ .avatar }}" alt="{{ .name }}" class="size-fluid-xl shrink-0 m-0! rounded-full! object-cover transition-transform duration-300 hover:-rotate-6" loading="lazy" />
 
             <div class="text-left">
-                <h3 title="{{ .name }}">
+                <h4 title="{{ .name }}">
                     {{ .name }}
-                </h3>
-                <p class="line-clamp-2 text-gray-500 dark:text-gray-400" title="{{ .description }}">
+                </h4>
+                <p class="line-clamp-1 text-fluid-sm text-gray-500 dark:text-gray-400" title="{{ .description }}">
                     {{ .description }}
                 </p>
             </div>

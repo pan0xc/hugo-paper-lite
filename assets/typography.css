@@ -1,31 +1,33 @@
 :root {
-  --step--2: clamp(0.7813rem, 0.798rem + -0.0348vw, 0.7901rem);
-  --step--1: clamp(0.8889rem, 0.846rem + 0.1906vw, 0.9375rem);
-  --step-0: clamp(1rem, 0.8897rem + 0.4902vw, 1.125rem);
-  --step-1: clamp(1.125rem, 0.9265rem + 0.8824vw, 1.35rem);
-  --step-2: clamp(1.2656rem, 0.9529rem + 1.3897vw, 1.62rem);
-  --step-3: clamp(1.4238rem, 0.9649rem + 2.0399vw, 1.944rem);
+  --step--2: clamp(0.6944rem, 0.8745rem + -0.3752vw, 0.7901rem);
+  --step--1: clamp(0.8333rem, 0.9379rem + -0.2179vw, 0.8889rem);
+  --step-0: clamp(1rem, 1rem + 0vw, 1rem);
+  --step-1: clamp(1.125rem, 1.0588rem + 0.2941vw, 1.2rem);
+  --step-2: clamp(1.2656rem, 1.1118rem + 0.6838vw, 1.44rem);
+  --step-3: clamp(1.4238rem, 1.1554rem + 1.1928vw, 1.728rem);
 
   --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
-  --space-2xs: clamp(0.4375rem, 0.3654rem + 0.3205vw, 0.5rem);
-  --space-xs: clamp(0.6875rem, 0.6154rem + 0.3205vw, 0.75rem);
-  --space-s: clamp(0.875rem, 0.7308rem + 0.641vw, 1rem);
-  --space-m: clamp(1.3125rem, 1.0962rem + 0.9615vw, 1.5rem);
-  --space-l: clamp(1.75rem, 1.4615rem + 1.2821vw, 2rem);
-  --space-xl: clamp(2.625rem, 2.1923rem + 1.9231vw, 3rem);
-  --space-2xl: clamp(3.5rem, 2.9231rem + 2.5641vw, 4rem);
-  --space-3xl: clamp(5.25rem, 4.3846rem + 3.8462vw, 6rem);
+  --space-2xs: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
+  --space-xs: clamp(0.75rem, 0.75rem + 0vw, 0.75rem);
+  --space-s: clamp(1rem, 1rem + 0vw, 1rem);
+  --space-m: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+  --space-l: clamp(2rem, 2rem + 0vw, 2rem);
+  --space-xl: clamp(3rem, 3rem + 0vw, 3rem);
+  --space-2xl: clamp(4rem, 4rem + 0vw, 4rem);
+  --space-3xl: clamp(6rem, 6rem + 0vw, 6rem);
 
-  --space-3xs-2xs: clamp(0.25rem, -0.0385rem + 1.2821vw, 0.5rem);
-  --space-2xs-xs: clamp(0.4375rem, 0.0769rem + 1.6026vw, 0.75rem);
-  --space-xs-s: clamp(0.6875rem, 0.3269rem + 1.6026vw, 1rem);
-  --space-s-m: clamp(0.875rem, 0.1538rem + 3.2051vw, 1.5rem);
-  --space-m-l: clamp(1.3125rem, 0.5192rem + 3.5256vw, 2rem);
-  --space-l-xl: clamp(1.75rem, 0.3077rem + 6.4103vw, 3rem);
-  --space-xl-2xl: clamp(2.625rem, 1.0385rem + 7.0513vw, 4rem);
-  --space-2xl-3xl: clamp(3.5rem, 0.6154rem + 12.8205vw, 6rem);
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, 0.0294rem + 0.9804vw, 0.5rem);
+  --space-2xs-xs: clamp(0.5rem, 0.2794rem + 0.9804vw, 0.75rem);
+  --space-xs-s: clamp(0.75rem, 0.5294rem + 0.9804vw, 1rem);
+  --space-s-m: clamp(1rem, 0.5588rem + 1.9608vw, 1.5rem);
+  --space-m-l: clamp(1.5rem, 1.0588rem + 1.9608vw, 2rem);
+  --space-l-xl: clamp(2rem, 1.1176rem + 3.9216vw, 3rem);
+  --space-xl-2xl: clamp(3rem, 2.1176rem + 3.9216vw, 4rem);
+  --space-2xl-3xl: clamp(4rem, 2.2353rem + 7.8431vw, 6rem);
 
-  --space-s-l: clamp(0.875rem, -0.4231rem + 5.7692vw, 2rem);
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.1176rem + 3.9216vw, 2rem);
 
   --line-height-xs: 1.6;
   --line-height-sm: 1.55;
@@ -38,6 +40,7 @@
   --line-height-h1: var(--line-height-3xl);
   --line-height-h2: var(--line-height-2xl);
   --line-height-h3: var(--line-height-xl);
+  --line-height-h4: var(--line-height-lg);
 }
 
 @theme inline {
@@ -47,6 +50,8 @@
   --text-fluid-h2--line-height: var(--line-height-h2);
   --text-fluid-h3: var(--step-1);
   --text-fluid-h3--line-height: var(--line-height-h3);
+  --text-fluid-h4: var(--step-0);
+  --text-fluid-h4--line-height: var(--line-height-h4);
   --text-fluid-subtle: var(--step-0);
   --text-fluid-subtle--line-height: var(--line-height-base);
   --text-fluid-body: var(--step-0);
@@ -73,7 +78,6 @@
     @apply hyphens-auto;
   }
 
-  font-size: var(--step-0);
   @apply text-justify [text-justify:inter-ideograph] wrap-break-word;
 
   h1 {
@@ -84,14 +88,20 @@
 
   h2 {
     font-size: var(--step-2);
-    font-weight: 500;
+    font-weight: 600;
     line-height: var(--line-height-h2);
   }
 
   h3 {
     font-size: var(--step-1);
-    font-weight: 500;
+    font-weight: 600;
     line-height: var(--line-height-h3);
+  }
+
+  h4 {
+    font-size: var(--step-0);
+    font-weight: 600;
+    line-height: var(--line-height-h4);
   }
 
   blockquote {
