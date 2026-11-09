@@ -952,10 +952,6 @@ button:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#), input:where([type=
   padding-left: var(--space-s);
   padding-right: var(--space-s);
 }
-.px-fluid-xs:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
-  padding-left: var(--space-xs);
-  padding-right: var(--space-xs);
-}
 .py-1:not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#):not(#\#) {
   padding-top: var(--spacing);
   padding-bottom: var(--spacing);
