@@ -23,7 +23,8 @@
   {{- with $avatar }}
   <div class="size-24 shrink-0 rounded-full outline outline-gray-200/80 dark:outline-gray-700/80">
     <img class="rounded-full object-cover transition-transform duration-300 hover:-rotate-6" src="{{ . }}"
-      alt="{{ site.Params.author.name | default site.Title }}" />
+      alt="{{ site.Params.author.name | default site.Title }}"
+      width="96" height="96" />
   </div>
   {{- end }}
 
