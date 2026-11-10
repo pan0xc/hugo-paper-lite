@@ -1,33 +1,33 @@
 :root {
-  --step--2: clamp(0.6944rem, 0.8745rem + -0.3752vw, 0.7901rem);
-  --step--1: clamp(0.8333rem, 0.9379rem + -0.2179vw, 0.8889rem);
-  --step-0: clamp(1rem, 1rem + 0vw, 1rem);
-  --step-1: clamp(1.125rem, 1.0588rem + 0.2941vw, 1.2rem);
-  --step-2: clamp(1.2656rem, 1.1118rem + 0.6838vw, 1.44rem);
-  --step-3: clamp(1.4238rem, 1.1554rem + 1.1928vw, 1.728rem);
+  --step--2: clamp(0.651rem, 0.6255rem + 0.1136vw, 0.68rem);
+  --step--1: clamp(0.7813rem, 0.7206rem + 0.2696vw, 0.85rem);
+  --step-0: clamp(0.9375rem, 0.8272rem + 0.4902vw, 1.0625rem);
+  --step-1: clamp(1.125rem, 0.9458rem + 0.7966vw, 1.3281rem);
+  --step-2: clamp(1.35rem, 1.0763rem + 1.2163vw, 1.6602rem);
+  --step-3: clamp(1.62rem, 1.2184rem + 1.7851vw, 2.0752rem);
 
   --space-3xs: clamp(0.25rem, 0.25rem + 0vw, 0.25rem);
-  --space-2xs: clamp(0.5rem, 0.5rem + 0vw, 0.5rem);
-  --space-xs: clamp(0.75rem, 0.75rem + 0vw, 0.75rem);
-  --space-s: clamp(1rem, 1rem + 0vw, 1rem);
-  --space-m: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
-  --space-l: clamp(2rem, 2rem + 0vw, 2rem);
-  --space-xl: clamp(3rem, 3rem + 0vw, 3rem);
-  --space-2xl: clamp(4rem, 4rem + 0vw, 4rem);
-  --space-3xl: clamp(6rem, 6rem + 0vw, 6rem);
+  --space-2xs: clamp(0.5rem, 0.4449rem + 0.2451vw, 0.5625rem);
+  --space-xs: clamp(0.6875rem, 0.5772rem + 0.4902vw, 0.8125rem);
+  --space-s: clamp(0.9375rem, 0.8272rem + 0.4902vw, 1.0625rem);
+  --space-m: clamp(1.4375rem, 1.2721rem + 0.7353vw, 1.625rem);
+  --space-l: clamp(1.875rem, 1.6544rem + 0.9804vw, 2.125rem);
+  --space-xl: clamp(2.8125rem, 2.4816rem + 1.4706vw, 3.1875rem);
+  --space-2xl: clamp(3.75rem, 3.3088rem + 1.9608vw, 4.25rem);
+  --space-3xl: clamp(5.625rem, 4.9632rem + 2.9412vw, 6.375rem);
 
   /* One-up pairs */
-  --space-3xs-2xs: clamp(0.25rem, 0.0294rem + 0.9804vw, 0.5rem);
-  --space-2xs-xs: clamp(0.5rem, 0.2794rem + 0.9804vw, 0.75rem);
-  --space-xs-s: clamp(0.75rem, 0.5294rem + 0.9804vw, 1rem);
-  --space-s-m: clamp(1rem, 0.5588rem + 1.9608vw, 1.5rem);
-  --space-m-l: clamp(1.5rem, 1.0588rem + 1.9608vw, 2rem);
-  --space-l-xl: clamp(2rem, 1.1176rem + 3.9216vw, 3rem);
-  --space-xl-2xl: clamp(3rem, 2.1176rem + 3.9216vw, 4rem);
-  --space-2xl-3xl: clamp(4rem, 2.2353rem + 7.8431vw, 6rem);
+  --space-3xs-2xs: clamp(0.25rem, -0.0257rem + 1.2255vw, 0.5625rem);
+  --space-2xs-xs: clamp(0.5rem, 0.2243rem + 1.2255vw, 0.8125rem);
+  --space-xs-s: clamp(0.6875rem, 0.3566rem + 1.4706vw, 1.0625rem);
+  --space-s-m: clamp(0.9375rem, 0.3309rem + 2.6961vw, 1.625rem);
+  --space-m-l: clamp(1.4375rem, 0.8309rem + 2.6961vw, 2.125rem);
+  --space-l-xl: clamp(1.875rem, 0.7169rem + 5.1471vw, 3.1875rem);
+  --space-xl-2xl: clamp(2.8125rem, 1.5441rem + 5.6373vw, 4.25rem);
+  --space-2xl-3xl: clamp(3.75rem, 1.4338rem + 10.2941vw, 6.375rem);
 
   /* Custom pairs */
-  --space-s-l: clamp(1rem, 0.1176rem + 3.9216vw, 2rem);
+  --space-s-l: clamp(0.9375rem, -0.1103rem + 4.6569vw, 2.125rem);
 
   --line-height-xs: 1.6;
   --line-height-sm: 1.55;
@@ -73,6 +73,10 @@
   --spacing-fluid-3xl: var(--space-3xl);
 }
 
+.prose {
+  font-size: var(--step-0);
+}
+
 @utility prose {
   :lang(en) {
     @apply hyphens-auto;
@@ -82,25 +86,25 @@
 
   h1 {
     font-size: var(--step-3);
-    font-weight: 600;
+    font-weight: 500;
     line-height: var(--line-height-h1);
   }
 
   h2 {
     font-size: var(--step-2);
-    font-weight: 600;
+    font-weight: 500;
     line-height: var(--line-height-h2);
   }
 
   h3 {
     font-size: var(--step-1);
-    font-weight: 600;
+    font-weight: 500;
     line-height: var(--line-height-h3);
   }
 
   h4 {
     font-size: var(--step-0);
-    font-weight: 600;
+    font-weight: 500;
     line-height: var(--line-height-h4);
   }
 
