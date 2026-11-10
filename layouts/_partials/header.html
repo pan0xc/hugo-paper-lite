@@ -1,4 +1,4 @@
-<header class="flex flex-row h-16 w-full justify-between px-fluid-m border-b border-gray-300/80 dark:border-gray-700/80">
+<header class="flex flex-row h-12 w-full justify-between px-fluid-m border-b border-gray-300/80 dark:border-gray-700/80">
   {{- $url := .RelPermalink -}}<!---->
   {{- with site.Menus.main -}}
   <nav class="hidden md:flex items-center gap-x-fluid-xl w-full">
@@ -14,14 +14,14 @@
 
   <nav class="md:hidden flex items-center justify-between w-full">
     <a class="text-fluid-h3" href="/">{{ site.Title }}</a>
-    <div class="grid shrink-0 place-items-center">
-      <button id="open-menu" type="button" command="show-modal" commandfor="menu-modal" aria-label="open menu" class="col-start-1 row-start-1">
-        <svg class="size-fluid-m">
+    <div class="grid shrink-0">
+      <button id="open-menu" type="button" command="show-modal" commandfor="menu-modal" aria-label="open menu" class="col-start-1 row-start-1 ">
+        <svg class="size-4.5">
           <use href="/icons.svg#menu"></use>
         </svg>
       </button>
-      <button id="close-menu" type="button" command="close" commandfor="menu-modal" aria-label="close menu" class="col-start-1 row-start-1">
-        <svg class="size-6">
+      <button id="close-menu" type="button" command="close" commandfor="menu-modal" aria-label="close menu" class="col-start-1 row-start-1 ">
+        <svg class="size-4.5">
           <use href="/icons.svg#close"></use>
         </svg>
       </button>
