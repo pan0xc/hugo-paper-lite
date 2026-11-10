@@ -21,7 +21,7 @@
 {{- if or $avatar site.Params.author.name }}
 <section class="flex flex-col items-center gap-y-fluid-2xs">
   {{- with $avatar }}
-  <div class="size-fluid-3xl shrink-0 rounded-full outline outline-gray-200/80 dark:outline-gray-700/80">
+  <div class="size-24 shrink-0 rounded-full outline outline-gray-200/80 dark:outline-gray-700/80">
     <img class="rounded-full object-cover transition-transform duration-300 hover:-rotate-6" src="{{ . }}"
       alt="{{ site.Params.author.name | default site.Title }}" />
   </div>
